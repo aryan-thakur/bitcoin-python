@@ -1,0 +1,44 @@
+* {
+	font-family: 'PT Sans', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+  padding: 0;
+}
+
+.hashy {
+  text-align: center;
+}
+
+.wrappery {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 800px;
+  border: 1px solid black;
+}
+
+.heady {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.footy {
+  display: flex;
+  justify-content: center;
+}
+
+#transaction_title{
+  display: block;
+  text-align: center;
+}

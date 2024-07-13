@@ -1,0 +1,22 @@
+  <br>
+  <br>
+  <div class="wrappedTrans">
+  <div class="sign flexy">
+    <h6>{{info.id}}</h6>
+  </div>
+  <div class="txins flexy">
+    <div ng-repeat="txin in info.txins" class="txinblock">
+      <h6>TxOutId: {{txin.txoutid}}</h6>
+      <h6>TxOutIndex: {{txin.txoutidx}}</h6>
+      <h6 class="signatures">Signature: {{txin.signature}}</h6>
+      <br>
+    </div>
+  </div>
+  <div class="txouts flexy">
+    <div ng-repeat="txout in info.txouts" class="txoutblock">
+      <h6>Address: {{txout.address}}</h6>
+      <h6>Amount: {{txout.amount}}</h6>
+      <br>
+    </div>
+  </div>
+  </div>

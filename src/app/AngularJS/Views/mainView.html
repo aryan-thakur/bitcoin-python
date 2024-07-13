@@ -1,0 +1,49 @@
+<div class="main" ng-init="init()">
+  <div class ="title">
+    <h1>Dotcoin!</h1>
+  </div>
+  <div id = "generateWrapper">
+  <h5 id="generateText" ng-style="destroy" ng-click="generate()">GENERATE</h5>
+  </div>
+  <hr>
+  <div id = "joinWrapper">
+  <div class="partRow">
+   <p class="nameInput">Port: </p>
+   <input class ="inputRow" type="text" ng-model="joinPort" name="" value="">
+   <button id="joinbutton" class="buttons" ng-click="joinNode()">Join</button>
+   <button id="refreshbutton" class="buttons" ng-click="getPeers()">Refresh</button>
+   </div>
+   <div>
+     <p id = "peersList">Peers = {{allPeers}}</p>
+   </div>
+  </div>
+  <hr>
+  <div class = "top">
+    <p><strong>Balance</strong>: <span ng-style="balance_obj">{{bal}}</span></p>
+    <p><strong>Wallet Address</strong>: {{addr}}</p>
+  </div>
+  <hr>
+  <div class="form">
+    <div class = "inputflex">
+   <div class = "part">
+     <p class="nameInput">Amount</p>
+    <input type="text" id="amountinput" class ="inputty" ng-model="amtIn" name="" value="">
+    </div>
+   <div class="part">
+    <p class="nameInput">Receiver Address</p>
+    <input class ="inputty" type="text" ng-model="addrIn" name="" value="">
+    </div>
+    </div>
+    <div id = "mineButtons">
+    <button id="sendbutton" class="buttons" ng-click="sendTransaction()">Send</button>
+    <button id="mine" class="buttons" style="display:none" ng-click="mineBlock(0)">Mine Client</button>
+    </div>
+    </div>
+  <hr>
+  <p class = "poolTitle"> Transaction Pool <p>
+  <transaction ng-repeat="tx in pool" info="tx"></transaction>
+  <hr>
+  <p class = "poolTitle"> Blockchain <p>
+  <block ng-repeat="block in blockchain" info="block"></block>
+</div>
+<div class="loading" ng-show="loader">Loading&#8230;</div>

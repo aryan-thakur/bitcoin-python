@@ -1,0 +1,41 @@
+<div class = "block wrappery">
+   <div class = "block heady">
+     <span class = "hashy">Hash: {{info.hash}}</span>
+     <!--<img height="20px" width="20px" src="../../../../assets/clipboards.png">-->
+  </div>
+     <hr>
+    <div class = "block bodyy">
+    <table align="center" >
+   <tbody>
+    <tr>
+       <td>Index</td>
+       <td>{{info.index}}</td>
+     </tr>
+     <tr>
+       <td>Timestamp</td>
+       <td>{{info.timestamp}}</td>
+      </tr>
+      <tr>
+        <td>Difficulty</td>
+        <td>{{info.difficulty}}</td>
+       </tr>
+       <tr>
+         <td>Nonce</td>
+         <td>{{info.nonce}}</td>
+        </tr>
+        <tr>
+          <td>Previous Hash</td>
+          <td>{{info.previoushash}}</td>
+         </tr>
+     </tbody>
+     </table>
+    </div>
+    <hr>
+      <h3 id = "transaction_title"> Transactions ({{info.data.length}})</h3>
+    <div class = "block footy">
+    <transaction class="blockTransactions" ng-repeat="tx in info.data" info="tx"></transaction>
+    </div>
+    </div>
+		<div class = "chainWrapper">
+		<img class="chains" width="75px" height="75px" style="transform:rotate(45deg);margin-top:20px;margin-bottom:20px;opacity:0.7;" src="../../../../app/assets/chains.png">
+		</div>

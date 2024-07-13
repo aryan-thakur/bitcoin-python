@@ -1,0 +1,38 @@
+* {
+	font-family: 'PT Sans', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+  padding: 0;
+}
+
+
+.wrappedTrans {
+	width: 80%;
+	margin: 0 auto;
+	border: 3px solid black;
+}
+
+.flexy {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrappedTrans {
+	background-color: rgba(150, 20, 20, 0.8)
+}
+
+.txins {
+	background-color: rgba(20, 150, 20, 0.8)
+}
+
+.txouts {
+	background-color: rgba(60, 60, 150, 0.8)
+}
+
+.fulllen {
+	width: 100%;
+}
